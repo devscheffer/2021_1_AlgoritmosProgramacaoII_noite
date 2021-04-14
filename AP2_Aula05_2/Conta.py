@@ -14,18 +14,19 @@ class Conta:
         if self.__saldo - 1.99 >= valor :
             self.__saldo -= valor
             self.__descontarTarifa()
-
-    def getSaldo(self):
+    @property
+    def Saldo(self):
         admin = True
         if admin:
             return self.__saldo
-
-    def setSaldo(self, valor):
+        
+    @Saldo.setter
+    def Saldo(self, valor):
         admin = True
         if admin:
             self.__saldo = valor
 
     def imprimirSaldo(self):
-        print("O saldo2 é: ", self.__saldo)
+        print("O saldo2 é: ", self.saldo)
 
     
